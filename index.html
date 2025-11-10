@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+    <!-- ===== HEADER ===== -->
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">MyPortfolio</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html">CONTACT</a>
-        <a href="services.html">SERVICES</a>
-        <a href="policy.html">POLICY</a>
-        <a href="products.html">PRODUCTS</a>
-    </nav>
+    <!-- ===== HOME SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Hello, I'm <span>Your Name</span></h2>
+            <p>I'm a passionate <strong>Web Developer</strong> who loves building modern and responsive websites.</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
 
-    <h1>AGMO ACADEMY</h1>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-pic" />
+            <div class="about-text">
+                <p>
+                    Hi! I’m [Your Name], a web developer with a passion for creating beautiful and functional websites.
+                    I specialize in front-end technologies like HTML, CSS, and JavaScript, and I love bringing ideas to
+                    life on the web.
+                </p>
+                <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
+            </div>
+        </div>
+    </section>
 
-    <h2>Learning Git</h2>
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project 1">
+                <h3>Project One</h3>
+                <p>A brief description of your project goes here.</p>
+            </div>
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project 2">
+                <h3>Project Two</h3>
+                <p>Another project with some cool features and design.</p>
+            </div>
+            <div class="project-card">
+                <img src="project3.jpg" alt="Project 3">
+                <h3>Project Three</h3>
+                <p>This project highlights my skills in responsive web design.</p>
+            </div>
+        </div>
+    </section>
 
-    <ul>
-        <li>git init - start your git</li>
-        <li>git status - status</li>
-        <li>git add - add changes to be commited</li>
-        <li>git commit - create a commit</li>
-        <li>git log - list commits</li>
-    </ul>
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
 
-    <blockquote>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi impedit ab rerum unde aspernatur dolorum dolorem placeat quos praesentium, fuga consequatur voluptatum possimus perspiciatis dignissimos voluptatem minima earum modi cumque.
-    </blockquote>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2025 Your Name | All Rights Reserved</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a> |
+            <a href="#">GitHub</a> |
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
 </body>
+
 </html>
