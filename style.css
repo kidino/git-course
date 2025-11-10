@@ -233,3 +233,45 @@ footer .social-links a:hover {
         margin: 10px 0;
     }
 }
+
+/* ===== PESERTA FULLSTACK SECTION ===== */
+.peserta {
+    background-color: #f8f9fa;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.peserta h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.peserta-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+}
+
+.peserta-list li {
+    margin: 10px 15px;
+}
+
+.peserta-list a {
+    text-decoration: none;
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.peserta-list a:hover {
+    background-color: #1976d2;
+    transform: translateY(-3px);
+}
