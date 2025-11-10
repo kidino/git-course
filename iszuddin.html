@@ -3,49 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iszuddin</title>
+    <title>Khairil Iszuddin bin Ismail - Tech Leader & Entrepreneur</title>
     <style>
-        body * {
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            letter-spacing: -1px;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #007acc;
+            margin: 2.5rem 0 1.5rem 0;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin: 2rem 0 1rem 0;
+            font-weight: 600;
+            border-left: 4px solid #007acc;
+            padding-left: 15px;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Lists */
+        ul {
+            margin-bottom: 2rem;
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 1rem;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007acc;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        li:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Images */
         img {
-            max-width: 400px; height: auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin: 1.5rem auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Links */
+        a {
+            color: #007acc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #005c99;
+            text-decoration: underline;
+        }
+
+        /* Strong text */
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Image gallery styling */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        /* Professional section styling */
+        .section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            li {
+                padding: 12px;
+            }
+        }
+
+        /* Subtle animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            animation: fadeIn 0.6s ease-out;
         }
     </style>
 </head>
 <body>
-    <h1>Iszuddin</h1>
+    <h1>Khairil Iszuddin bin Ismail</h1>
 
-<h2 id="khairil-iszuddin-bin-ismail">Khairil Iszuddin bin Ismail</h2>
-<p><img src="https://www.dagangnews.com/sites/default/files/inline-images/WhatsApp%20Image%202020-07-07%20at%2011.03.07%20AM.jpeg" alt="Image"></p>
-<p><img src="https://iszuddinismail.com/wp-content/uploads/2021/06/banner-2.png" alt="Image"></p>
-<p><img src="https://tamingtech.my/wp-content/uploads/2024/07/laravel-training-cover.jpg" alt="Image"></p>
-<p>Berikut ialah ringkasan mengenai Khairil Iszuddin bin Ismail — beliau juga kadang-kala dirujuk sebagai “Iszuddin Ismail”.</p>
-<h3 id="latar-belakang">Latar belakang</h3>
-<ul>
-<li>Beliau memperoleh Ijazah Sarjana Muda Sains Komputer dari Universiti Teknologi Malaysia (UTM) pada tahun 2001. (<a href="https://tamingtech.my/trainer/khairil-iszuddin-bin-ismail/?utm_source=chatgpt.com" title="Khairil Iszuddin bin Ismail - HRDF Claimable IT Courses by Taming Tech Sdn Bhd">Taming Tech HRDF Courses</a>)</li>
-<li>Kemahiran teknikal beliau merangkumi pembangunan web menggunakan PHP, Laravel, pengurusan pangkalan data MySQL, pembangunan API RESTful, penyebaran ke infrastrukur awan (seperti AWS/DigitalOcean) serta pengurusan pelayan (server) untuk aplikasi web. (<a href="https://tamingtech.my/trainer/khairil-iszuddin-bin-ismail/?utm_source=chatgpt.com" title="Khairil Iszuddin bin Ismail - HRDF Claimable IT Courses by Taming Tech Sdn Bhd">Taming Tech HRDF Courses</a>)</li>
-</ul>
-<h3 id="kerjaya-sat-prestasi">Kerjaya &amp; Sat-Prestasi</h3>
+    <div class="image-gallery">
+        <img src="https://www.dagangnews.com/sites/default/files/inline-images/WhatsApp%20Image%202020-07-07%20at%2011.03.07%20AM.jpeg" alt="Khairil Iszuddin bin Ismail">
+        <img src="https://iszuddinismail.com/wp-content/uploads/2021/06/banner-2.png" alt="Iszuddin Ismail Banner">
+        <img src="https://tamingtech.my/wp-content/uploads/2024/07/laravel-training-cover.jpg" alt="Laravel Training Cover">
+    </div>
+
+    <p>Berikut ialah ringkasan mengenai Khairil Iszuddin bin Ismail — beliau juga kadang-kala dirujuk sebagai "Iszuddin Ismail".</p>
+
+    <div class="section">
+        <h3 id="latar-belakang">Latar belakang</h3>
+        <ul>
+            <li>Beliau memperoleh Ijazah Sarjana Muda Sains Komputer dari Universiti Teknologi Malaysia (UTM) pada tahun 2001. (<a href="https://tamingtech.my/trainer/khairil-iszuddin-bin-ismail/?utm_source=chatgpt.com" title="Khairil Iszuddin bin Ismail - HRDF Claimable IT Courses by Taming Tech Sdn Bhd">Taming Tech HRDF Courses</a>)</li>
+            <li>Kemahiran teknikal beliau merangkumi pembangunan web menggunakan PHP, Laravel, pengurusan pangkalan data MySQL, pembangunan API RESTful, penyebaran ke infrastrukur awan (seperti AWS/DigitalOcean) serta pengurusan pelayan (server) untuk aplikasi web. (<a href="https://tamingtech.my/trainer/khairil-iszuddin-bin-ismail/?utm_source=chatgpt.com" title="Khairil Iszuddin bin Ismail - HRDF Claimable IT Courses by Taming Tech Sdn Bhd">Taming Tech HRDF Courses</a>)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3 id="kerjaya-sat-prestasi">Kerjaya &amp; Sat-Prestasi</h3>
 <ul>
 <li>Beliau pernah berkhidmat sebagai CTO di E‑Sentral.com, sebuah startup Malaysia yang membekalkan e-buku untuk penerbit dan pembaca serantau. (<a href="https://tamingtech.my/trainer/khairil-iszuddin-bin-ismail/?utm_source=chatgpt.com" title="Khairil Iszuddin bin Ismail - HRDF Claimable IT Courses by Taming Tech Sdn Bhd">Taming Tech HRDF Courses</a>)</li>
 <li>Setelah itu, beliau menubuhkan / mengetuai syarikat sendiri iaitu Taming Tech Sdn. Bhd. (berpusat di Taman Melawati, Kuala Lumpur). Taming Tech menyediakan khidmat pembangunan web &amp; aplikasi mudah alih, latihan pengaturcaraan (terutamanya PHP/Laravel) serta konsultasi teknikal untuk syarikat-startup. (<a href="https://contactout.com/company/Taming-Tech-Sdn-Bhd-71285?utm_source=chatgpt.com" title="Taming Tech Sdn. Bhd. - Company Profile &amp; Staff Directory | ContactOut">ContactOut</a>)</li>
 <li>Dalam komuniti teknologi, beliau turut aktif sebagai penganjur acara komuniti seperti JOMLAUNCH Asia Virtual Conference serta komuniti pemaju “JOMWEB”. Melalui acara ini, beliau berusaha membantu golongan pembangun solo, bootstrappers, pengaturcara dan digital nomad di Asia untuk berkongsi pengalaman dan melancarkan projek masing-masing. (<a href="https://iszuddinismail.com/?utm_source=chatgpt.com" title="Iszuddin Ismail - Organizer of JOMLAUNCH Asia Virtual Conference">Iszuddin Ismail</a>)</li>
-<li>Semasa 2019 hingga 2021, beliau juga dilantik sebagai Presiden Persatuan Usahawan dan Industri ICT Bumiputera Malaysia (NEF) yang memberi fokus pada keusahawanan teknologi oleh masyarakat Bumiputera di Malaysia. (<a href="https://nefmalaysia.my/nef-council-members-2019-2021/?utm_source=chatgpt.com" title="NEF Council Members 2019-2021 – NEF Malaysia">nefmalaysia.my</a>)</li>
-</ul>
-<h3 id="pendekatan-falsafah">Pendekatan &amp; Falsafah</h3>
-<ul>
-<li>Beliau sering menekankan pentingnya “mulakan sahaja” — bahawa pembangun atau startup tidak perlu menunggu pelabur besar atau geran untuk mula; dengan kos teknologi yang semakin rendah (contoh: pelayan awan murah, alat pemasaran digital) — ini menjadikan masa untuk bertindak <strong>sekarang</strong>. (<a href="https://smeniaga.com/2019/11/borak-tepi-bersama-iszuddin-ismail-presiden-nef/?utm_source=chatgpt.com" title="Borak Tepi bersama Iszuddin Ismail, Presiden NEF - Pengurusan di SME Niaga">SME Niaga</a>)</li>
-<li>Fokus beliau bukan hanya pada menghasilkan kod atau projek teknikal sahaja, tetapi lebih kepada <strong>menyelesaikan masalah</strong>, membina produk minimum viable (MVP) dahulu, menguji pasaran, dan belajar daripada kegagalan serta kejayaan. (<a href="https://smeniaga.com/2019/11/borak-tepi-bersama-iszuddin-ismail-presiden-nef/?utm_source=chatgpt.com" title="Borak Tepi bersama Iszuddin Ismail, Presiden NEF - Pengurusan di SME Niaga">SME Niaga</a>)</li>
-</ul>
-<h3 id="kenapa-beliau-dipandang-penting">Kenapa Beliau Dipandang Penting</h3>
-<ul>
-<li>Beliau merupakan antara penggerak komuniti teknologi tempatan yang membantu menghubungkan pembangun muda dan usahawan konvensional, khususnya dalam pengembangan ekosistem teknologi Malaysia.</li>
-<li>Melalui latihan dan kandungan yang disampaikan beliau, orang ramai mendapat akses kepada pengetahuan teknikal (PHP, Laravel, cloud deployment) dalam Bahasa Melayu yang lebih mudah diakses.</li>
-<li>Kepimpinan beliau dalam NEF dan komuniti JOMWEB/JOMLAUNCH mencerminkan usaha pengembangan bakat teknologi tempatan — bukan hanya pengguna teknologi, tetapi juga pembina produk dan perkhidmatan.</li>
-</ul>
-<p>Jika anda mahu, saya boleh cari <strong>artikel temuramah lengkap</strong> atau <strong>video beliau berbicara</strong> untuk anda — adakah anda berminat?</p>
+        <li>Semasa 2019 hingga 2021, beliau juga dilantik sebagai Presiden Persatuan Usahawan dan Industri ICT Bumiputera Malaysia (NEF) yang memberi fokus pada keusahawanan teknologi oleh masyarakat Bumiputera di Malaysia. (<a href="https://nefmalaysia.my/nef-council-members-2019-2021/?utm_source=chatgpt.com" title="NEF Council Members 2019-2021 – NEF Malaysia">nefmalaysia.my</a>)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3 id="pendekatan-falsafah">Pendekatan &amp; Falsafah</h3>
+        <ul>
+            <li>Beliau sering menekankan pentingnya "mulakan sahaja" — bahawa pembangun atau startup tidak perlu menunggu pelabur besar atau geran untuk mula; dengan kos teknologi yang semakin rendah (contoh: pelayan awan murah, alat pemasaran digital) — ini menjadikan masa untuk bertindak <strong>sekarang</strong>. (<a href="https://smeniaga.com/2019/11/borak-tepi-bersama-iszuddin-ismail-presiden-nef/?utm_source=chatgpt.com" title="Borak Tepi bersama Iszuddin Ismail, Presiden NEF - Pengurusan di SME Niaga">SME Niaga</a>)</li>
+            <li>Fokus beliau bukan hanya pada menghasilkan kod atau projek teknikal sahaja, tetapi lebih kepada <strong>menyelesaikan masalah</strong>, membina produk minimum viable (MVP) dahulu, menguji pasaran, dan belajar daripada kegagalan serta kejayaan. (<a href="https://smeniaga.com/2019/11/borak-tepi-bersama-iszuddin-ismail-presiden-nef/?utm_source=chatgpt.com" title="Borak Tepi bersama Iszuddin Ismail, Presiden NEF - Pengurusan di SME Niaga">SME Niaga</a>)</li>
+        </ul>
+    </div>
+    <div class="section">
+        <h3 id="kenapa-beliau-dipandang-penting">Kenapa Beliau Dipandang Penting</h3>
+        <ul>
+            <li>Beliau merupakan antara penggerak komuniti teknologi tempatan yang membantu menghubungkan pembangun muda dan usahawan konvensional, khususnya dalam pengembangan ekosistem teknologi Malaysia.</li>
+            <li>Melalui latihan dan kandungan yang disampaikan beliau, orang ramai mendapat akses kepada pengetahuan teknikal (PHP, Laravel, cloud deployment) dalam Bahasa Melayu yang lebih mudah diakses.</li>
+            <li>Kepimpinan beliau dalam NEF dan komuniti JOMWEB/JOMLAUNCH mencerminkan usaha pengembangan bakat teknologi tempatan — bukan hanya pengguna teknologi, tetapi juga pembina produk dan perkhidmatan.</li>
+        </ul>
+
+        <p>Jika anda mahu, saya boleh cari <strong>artikel temuramah lengkap</strong> atau <strong>video beliau berbicara</strong> untuk anda — adakah anda berminat?</p>
+    </div>
+
+<div>
+    <h2>Peserta Fullstack Program</h2>
+
+    <ol>
+        <li><a href="amirul.html">Amirul</a></li>
+        <li><a href="amsyar.html">Amsyar</a></li>
+        <li><a href="hanif.html">Hanif</a></li>
+        <li><a href="iszuddin.html">Iszuddin</a></li>
+        <li><a href="jannah.html">Jannah</a></li>
+        <li><a href="juwei.html">Ju Wei</a></li>
+        <li><a href="khawarizmi.html">Khawarizmi</a></li>
+        <li><a href="LAI.html">Lai</a></li>
+        <li><a href="leo.html">Leo</a></li>
+        <li><a href="najmi.html">Najmi</a></li>
+        <li><a href="qayyum.html">Qayyum</a></li>
+    </ol>
+
+</div>
+
 
 </body>
 </html>
