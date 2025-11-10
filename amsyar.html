@@ -4,22 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amsyar</title>
-  </head>
-  <body>
     <style>
       :root {
         --bg1: #0f1724;
         --bg2: #071033;
-        --glass: rgba(255, 255, 255, 0.06);
         --accent: #7c5cff;
         --muted: rgba(255, 255, 255, 0.75);
       }
-      html,
       body {
-        height: 100%;
         margin: 0;
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-          Roboto, "Helvetica Neue", Arial;
+        font-family: Inter, system-ui, sans-serif;
         color: #e6eef8;
         background: radial-gradient(
             1200px 600px at 10% 10%,
@@ -32,64 +26,67 @@
             transparent
           ),
           linear-gradient(180deg, var(--bg1), var(--bg2));
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      .wrap {
-        min-height: 100vh;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        padding: 48px;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
       }
-      .card {
-        width: 100%;
-        max-width: 1100px;
-        display: grid;
-        grid-template-columns: 1fr 380px;
-        gap: 36px;
+      .card,
+      .p-card {
         background: linear-gradient(
           180deg,
           rgba(255, 255, 255, 0.02),
           rgba(255, 255, 255, 0.01)
         );
-        border-radius: 20px;
-        padding: 34px;
-        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6),
-          inset 0 1px 0 rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 20px;
         backdrop-filter: blur(8px);
+      }
+      .wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px;
+        width: 100%;
+      }
+      .card {
+        display: grid;
+        grid-template-columns: 1fr 380px;
+        gap: 36px;
+        max-width: 1100px;
+        padding: 34px;
+        box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
       }
       @media (max-width: 900px) {
         .card {
           grid-template-columns: 1fr;
-          max-width: 760px;
           padding: 28px;
         }
         .right {
           order: -1;
         }
       }
-      .left h1 {
+      h1 {
         margin: 0;
         font-size: clamp(28px, 4.4vw, 44px);
-        line-height: 1.03;
-        background: linear-gradient(90deg, #fff 0%, #c7e8ff 40%, #7c5cff 100%);
+        background: linear-gradient(90deg, #fff, #c7e8ff 40%, var(--accent));
         -webkit-background-clip: text;
-        background-clip: text;
         color: transparent;
         font-weight: 700;
       }
-      .subtitle {
+      .subtitle,
+      .bio,
+      footer,
+      .p-role,
+      .p-count {
         color: var(--muted);
-        margin-top: 10px;
-        font-size: 15px;
+        font-size: 14px;
       }
       .bio {
         margin-top: 20px;
-        color: #d6e7ff;
         line-height: 1.6;
-        font-size: 15px;
         max-width: 68ch;
       }
       .cta-row {
@@ -99,25 +96,20 @@
         flex-wrap: wrap;
       }
       .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
         padding: 10px 14px;
         border-radius: 10px;
         font-weight: 600;
-        font-size: 14px;
-        color: #071033;
-        background: var(--accent);
-        box-shadow: 0 6px 18px rgba(124, 92, 255, 0.12);
-        text-decoration: none;
         border: none;
         cursor: pointer;
+        background: var(--accent);
+        color: #071033;
+        box-shadow: 0 6px 18px rgba(124, 92, 255, 0.12);
+        text-decoration: none;
       }
       .btn.secondary {
         background: transparent;
         color: #cfe6ff;
         border: 1px solid rgba(255, 255, 255, 0.06);
-        box-shadow: none;
       }
       .skills {
         margin-top: 20px;
@@ -128,84 +120,41 @@
       .chip {
         padding: 8px 10px;
         border-radius: 999px;
-        background: linear-gradient(
-          90deg,
-          rgba(255, 255, 255, 0.03),
-          rgba(255, 255, 255, 0.01)
-        );
-        border: 1px solid rgba(255, 255, 255, 0.04);
+        background: rgba(255, 255, 255, 0.03);
         font-size: 13px;
         color: #d7e9ff;
+        border: 1px solid rgba(255, 255, 255, 0.04);
       }
       .right {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
         gap: 18px;
         padding: 22px;
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 255, 0.02),
-          rgba(255, 255, 255, 0.01)
-        );
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.03);
       }
       .avatar {
         width: 160px;
         height: 160px;
         border-radius: 20px;
-        background: linear-gradient(135deg, #7c5cff, #2dd4bf 70%);
+        background: linear-gradient(135deg, #7c5cff, #2dd4bf);
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
         font-size: 48px;
         font-weight: 700;
-        color: white;
-        box-shadow: 0 12px 30px rgba(2, 6, 23, 0.6);
         position: relative;
         overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.06);
       }
-      .avatar svg {
-        filter: drop-shadow(0 6px 18px rgba(124, 92, 255, 0.18));
-      }
-      .meta {
-        width: 100%;
-        text-align: center;
-      }
-      .meta h3 {
-        margin: 6px 0 0 0;
-        font-size: 20px;
-        color: #fff;
-      }
-      .meta p {
-        margin: 6px 0 0 0;
-        color: var(--muted);
-        font-size: 13px;
-      }
-      .progress {
-        width: 100%;
-        height: 12px;
-        background: rgba(255, 255, 255, 0.03);
-        border-radius: 999px;
-        margin-top: 12px;
-        overflow: hidden;
-      }
-      .progress > i {
-        display: block;
-        height: 100%;
-        background: linear-gradient(90deg, #2dd4bf, #7c5cff);
-        width: 72%;
-      }
-      /* animated background blobs */
       .blob {
         position: absolute;
         filter: blur(40px);
         opacity: 0.18;
-        will-change: transform;
         pointer-events: none;
+      }
+      .b1,
+      .b2 {
+        animation: move 12s ease-in-out infinite;
       }
       .b1 {
         width: 360px;
@@ -217,7 +166,6 @@
         );
         top: -80px;
         left: -60px;
-        animation: move1 12s ease-in-out infinite;
       }
       .b2 {
         width: 260px;
@@ -229,50 +177,76 @@
         );
         bottom: -80px;
         right: -40px;
-        animation: move2 14s ease-in-out infinite;
+        animation-duration: 14s;
       }
-      @keyframes move1 {
-        0% {
-          transform: translateY(0) translateX(0);
-        }
+      @keyframes move {
         50% {
-          transform: translateY(18px) translateX(12px);
-        }
-        100% {
-          transform: translateY(0) translateX(0);
+          transform: translate(18px, 12px);
         }
       }
-      @keyframes move2 {
-        0% {
-          transform: translateY(0) translateX(0);
-        }
-        50% {
-          transform: translateY(-18px) translateX(-12px);
-        }
-        100% {
-          transform: translateY(0) translateX(0);
-        }
+      .meta {
+        text-align: center;
       }
-      /* subtle icon styles */
-      .icon {
-        width: 16px;
-        height: 16px;
-        display: inline-block;
-        vertical-align: middle;
+      .progress {
+        width: 100%;
+        height: 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border-radius: 999px;
+        margin-top: 12px;
+        overflow: hidden;
       }
-      footer {
-        margin-top: 26px;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 13px;
+      .progress i {
+        display: block;
+        height: 100%;
+        width: 72%;
+        background: linear-gradient(90deg, #2dd4bf, #7c5cff);
+      }
+      /* participants */
+      .participants {
+        padding: 32px 48px 64px;
+        max-width: 1100px;
+      }
+      .p-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .p-card {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px;
+        transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+        text-decoration: none;
+        color: inherit;
+      }
+      .p-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(124, 92, 255, 0.18);
+        box-shadow: 0 14px 40px rgba(2, 6, 23, 0.45);
+      }
+      .p-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent), #2dd4bf);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 22px;
+        background: linear-gradient(90deg, #fff, #c7e8ff 40%, var(--accent));
+        -webkit-background-clip: text;
+        color: transparent;
       }
     </style>
-
+  </head>
+  <body>
     <div class="wrap">
-      <div
-        class="card"
-        role="region"
-        aria-label="Profile introduction for Tuan Amsyar Hazim"
-      >
+      <div class="card">
         <div class="left">
           <h1>Hi, I'm Tuan Amsyar Hazim</h1>
           <div class="subtitle">
@@ -280,137 +254,133 @@
             Solver
           </div>
           <p class="bio">
-            I craft modern, accessible interfaces and delightful
-            micro-interactions. I blend clean code with thoughtful design to
-            build experiences that feel polished and perform smoothly across
-            devices. Passionate about clean UI, performance, and continuous
-            learning.
+            I craft modern, accessible interfaces with delightful
+            micro-interactions, blending clean code with thoughtful design.
           </p>
-
-          <div class="cta-row" role="group" aria-label="Actions">
-            <a class="btn" href="#contact">
-              <svg
-                class="icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 3v18h20V3H2zm10 12l-8-6h16l-8 6z"
-                  fill="currentColor"
-                />
-              </svg>
-              Contact
-            </a>
-            <button
-              class="btn secondary"
-              onclick="toggleTheme()"
-              title="Toggle theme"
-            >
+          <div class="cta-row">
+            <a class="btn" href="#contact">✉️ Contact</a>
+            <button class="btn secondary" onclick="toggleTheme()">
               Toggle Glow
             </button>
           </div>
-
-          <div class="skills" aria-hidden="false">
-            <span class="chip">HTML & CSS</span>
-            <span class="chip">JavaScript</span>
-            <span class="chip">Vue / React</span>
-            <span class="chip">Responsive Design</span>
-            <span class="chip">UI/UX</span>
+          <div class="skills">
+            <span class="chip">HTML & CSS</span
+            ><span class="chip">JavaScript</span>
+            <span class="chip">Vue / React</span
+            ><span class="chip">Responsive Design</span
+            ><span class="chip">UI/UX</span>
           </div>
-
           <footer>
-            Currently exploring web animations, accessibility improvements, and
-            delightful onboarding flows.
+            Currently exploring web animations & accessibility improvements.
           </footer>
         </div>
-
-        <div class="right" aria-hidden="false">
-          <div
-            style="
-              position: relative;
-              width: 100%;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            "
-          >
-            <div class="blob b1" aria-hidden="true"></div>
-            <div class="blob b2" aria-hidden="true"></div>
-
-            <div class="avatar" aria-hidden="false" title="Tuan Amsyar Hazim">
-              <!-- simple illustrated monogram -->
-              <svg
-                width="110"
-                height="110"
-                viewBox="0 0 160 160"
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-label="Monogram A"
-              >
-                <defs>
-                  <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95" />
-                    <stop offset="1" stop-color="#ffffff" stop-opacity="0.85" />
-                  </linearGradient>
-                </defs>
-                <rect
-                  width="160"
-                  height="160"
-                  rx="24"
-                  fill="url(#g)"
-                  opacity="0.08"
-                />
-                <text
-                  x="50%"
-                  y="55%"
-                  dominant-baseline="middle"
-                  text-anchor="middle"
-                  font-family="Inter, sans-serif"
-                  font-weight="700"
-                  font-size="72"
-                  fill="white"
-                >
-                  AH
-                </text>
-              </svg>
-            </div>
+        <div class="right">
+          <div style="position: relative">
+            <div class="blob b1"></div>
+            <div class="blob b2"></div>
+            <div class="avatar"><span>AH</span></div>
           </div>
-
           <div class="meta">
             <h3>Tuan Amsyar Hazim</h3>
             <p>Frontend Developer • Creative Technologist</p>
-
-            <div class="progress" aria-hidden="true" title="Profile completion">
-              <i></i>
-            </div>
-
+            <div class="progress"><i></i></div>
             <div
               style="
                 margin-top: 12px;
                 display: flex;
                 gap: 8px;
                 justify-content: center;
-                width: 100%;
               "
             >
-              <a class="btn" href="#" style="padding: 8px 12px; font-size: 13px"
-                >Portfolio</a
-              >
-              <a
-                class="btn secondary"
-                href="#resume"
-                style="padding: 8px 12px; font-size: 13px"
-                >Resume</a
-              >
+              <a class="btn" href="#">Portfolio</a>
+              <a class="btn secondary" href="#resume">Resume</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <section class="participants">
+      <h2>Peserta FullStack</h2>
+      <p class="subtitle">
+        A curated list of classmates — click a card to open their page.
+      </p>
+      <div class="p-grid">
+        <a class="p-card" href="amirul.html"
+          ><span class="p-avatar">A</span>
+          <div>
+            <p class="p-name">Amirul</p>
+            <p class="p-role">Frontend</p>
+          </div></a
+        >
+        <a class="p-card" href="hanif.html"
+          ><span class="p-avatar">H</span>
+          <div>
+            <p class="p-name">Hanif</p>
+            <p class="p-role">UI / UX</p>
+          </div></a
+        >
+        <a class="p-card" href="iszuddin.html"
+          ><span class="p-avatar">I</span>
+          <div>
+            <p class="p-name">Iszuddin</p>
+            <p class="p-role">FullStack</p>
+          </div></a
+        >
+        <a class="p-card" href="jannah.html"
+          ><span class="p-avatar">J</span>
+          <div>
+            <p class="p-name">Jannah</p>
+            <p class="p-role">Motion</p>
+          </div></a
+        >
+        <a class="p-card" href="juwei.html"
+          ><span class="p-avatar">JW</span>
+          <div>
+            <p class="p-name">Juwei</p>
+            <p class="p-role">Backend</p>
+          </div></a
+        >
+        <a class="p-card" href="khawarizmi.html"
+          ><span class="p-avatar">K</span>
+          <div>
+            <p class="p-name">Khawarizmi</p>
+            <p class="p-role">Algorithms</p>
+          </div></a
+        >
+        <a class="p-card" href="LAI.html"
+          ><span class="p-avatar">L</span>
+          <div>
+            <p class="p-name">LAI</p>
+            <p class="p-role">Design</p>
+          </div></a
+        >
+        <a class="p-card" href="leo.html"
+          ><span class="p-avatar">Le</span>
+          <div>
+            <p class="p-name">Leo</p>
+            <p class="p-role">DevOps</p>
+          </div></a
+        >
+        <a class="p-card" href="najmi.html"
+          ><span class="p-avatar">N</span>
+          <div>
+            <p class="p-name">Najmi</p>
+            <p class="p-role">Accessibility</p>
+          </div></a
+        >
+        <a class="p-card" href="qayyum.html"
+          ><span class="p-avatar">Q</span>
+          <div>
+            <p class="p-name">Qayyum</p>
+            <p class="p-role">JavaScript</p>
+          </div></a
+        >
+      </div>
+      <p class="p-count">Total peserta: 10</p>
+    </section>
+
     <script>
-      // simple glow toggle for fun
       let glow = false;
       function toggleTheme() {
         glow = !glow;
