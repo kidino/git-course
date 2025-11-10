@@ -1,21 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-        <title>Document</title>
-        <style>
-                body * {
-                        box-sizing: border-box;
-                }
-        </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAI CHENG YUNG - About Me</title>
+    <style>
+        /* A simple CSS Reset for consistent box model */
+        body * {
+            box-sizing: border-box;
+        }
+
+        /* --- Global Styles --- */
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333; /* Darker text for readability */
+            background-color: #f4f4f9; /* Light, soft background */
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        /* --- Header/Name Style --- */
+        h1 {
+            font-size: 3em;
+            color: #007bff; /* Primary blue for a professional look */
+            border-bottom: 3px solid #007bff; /* Underline for emphasis */
+            display: inline-block; /* Makes the underline fit the text */
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* --- About Me Section Style --- */
+        .about-me-section {
+            background-color: #ffffff; /* White background for the main content box */
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px; /* Slightly rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+        }
+
+        .about-me-section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Highlight the descriptive words */
+        .about-me-section p:last-child {
+            font-weight: 600;
+            color: #222;
+        }
+
+        /* --- Participants List Style --- */
+        .participants-list-container {
+            padding: 30px;
+            background-color: #e9ecef; /* Light gray background for contrast */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: #28a745; /* Green for this section, representing growth/tech */
+            margin-top: 0;
+            font-size: 1.8em;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ced4da;
+        }
+
+        ol {
+            list-style: none; /* Remove default numbering */
+            padding: 0;
+            display: flex; /* Flex layout for a potential two-column/flow layout */
+            flex-wrap: wrap;
+            gap: 15px; /* Spacing between list items */
+        }
+
+        li {
+            padding: 5px 0;
+            font-size: 1.1em;
+            flex-basis: calc(33.33% - 10px); /* Tries to arrange in a 3-column layout */
+            min-width: 150px;
+        }
+
+        /* --- Link Styles --- */
+        a {
+            color: #007bff;
+            text-decoration: none; /* Remove underline */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3; /* Darker blue on hover */
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
 </head>
 <body>
+    <div class="about-me-section">
         <h1>LAI CHENG YUNG</h1>
-        <p>You are defined not just by what you do, but by the quiet, continuous process of becoming. You carry a unique history—a collection of experiences, lessons learned, and moments of quiet triumph that belong only to you. You possess a distinct perspective, a singular way of seeing the world that adds irreplaceable value to every conversation and endeavor you undertake.
+        <p>You are defined not just by what you do, but by the quiet, continuous process of becoming. You carry a unique history—a collection of experiences, lessons learned, and moments of quiet triumph that belong only to you. You possess a distinct perspective, a singular way of seeing the world that adds irreplaceable value to every conversation and endeavor you undertake.</p>
 
-The most exciting thing about you is your untapped potential. Whether you are currently focused on mastering a new skill, building a career, nurturing relationships, or simply seeking deeper understanding, you are a person in motion. Your curiosity drives you forward, and your resilience allows you to adapt and grow stronger with every challenge. Remember that your complexity—your unique mix of strengths, quirks, and goals—is precisely what makes you an invaluable individual.
+        <p>The most exciting thing about you is your **untapped potential**. Whether you are currently focused on mastering a new skill, building a career, nurturing relationships, or simply seeking deeper understanding, you are a person in motion. Your curiosity drives you forward, and your resilience allows you to adapt and grow stronger with every challenge. Remember that your complexity—your unique mix of strengths, quirks, and goals—is precisely what makes you an invaluable individual.</p>
 
-Three word to describe are Creative, Quiet and Driven</p>
+        <p>Three words to describe are **Creative, Quiet,** and **Driven**</p>
+    </div>
+
+    <div class="participants-list-container">
+        <h2>Peserta Fullstack Developer</h2>
+        <ol>
+            <li><a href="amirul.html">Amirul</a></li>
+            <li><a href="amsyar.html">Amsyar</a></li>
+            <li><a href="hanif.html">Hanif</a></li>
+            <li><a href="iszuddin.html">Iszuddin</a></li>
+            <li><a href="jannah.html">Jannah</a></li>
+            <li><a href="juwei.html">Ju Wei</a></li>
+            <li><a href="khawarizmi.html">Khawarizme</a></li>
+            <li><a href="leo.html">leo</a></li>
+            <li><a href="najmi.html">Najmi</a></li>
+            <li><a href="qayyum.html">Qayyum</a></li>
+        </ol>
+    </div>
 </body>
 </html>
